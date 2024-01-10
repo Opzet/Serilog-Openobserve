@@ -2,10 +2,13 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
+        <!-- Change the target framework to .NET Framework 4.8 -->
+        <TargetFramework>net48</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
+      <!-- Ensure package references are compatible with .NET Framework 4.8 -->
+      <!-- You might need to find alternative packages or versions for .NET Framework 4.8 -->
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
       <PackageReference Include="Serilog.Extensions.Hosting" Version="7.0.0" />
       <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.0" />

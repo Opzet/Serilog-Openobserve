@@ -1,24 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <AssemblyName>Serilog.Sinks.OpenObserve-KKP</AssemblyName>
-        <PackageId>Serilog.Sinks.OpenObserve-KKP</PackageId>
-        <Authors>Konrad Kamiński - Pawlak</Authors>
-        <RootNamespace>Serilog</RootNamespace>
-        <PackageTags>serilog;openobserve</PackageTags>
-        <PackageProjectUrl>https://github.com/konradkaminski/serilog-sinks-openobserve-kkp</PackageProjectUrl>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryType>git</RepositoryType>
-        <AssemblyVersion>1.0.2</AssemblyVersion>
-        <PackageVersion>1.0.2</PackageVersion>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    </PropertyGroup>
+  <PropertyGroup>
+    <!-- Change the target framework to .NET Framework 4.8 -->
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>Serilog.Sinks.OpenObserve-KKP</AssemblyName>
+    <PackageId>Serilog.Sinks.OpenObserve-KKP</PackageId>
+    <Authors>Konrad Kamiński - Pawlak</Authors>
+    <RootNamespace>Serilog</RootNamespace>
+    <PackageTags>serilog;openobserve</PackageTags>
+    <PackageProjectUrl>https://github.com/konradkaminski/serilog-sinks-openobserve-kkp</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <PackageVersion>1.0.2</PackageVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+  </PropertyGroup>
 
-    <ItemGroup>
-      <PackageReference Include="Serilog" Version="3.0.1" />
-      <PackageReference Include="Serilog.Expressions" Version="3.4.1" />
-      <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="3.1.0" />
-    </ItemGroup>
+  <ItemGroup>
+    <!-- Ensure package references are compatible with .NET Framework 4.8 -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Serilog" Version="3.0.1" />
+    <PackageReference Include="Serilog.Expressions" Version="3.4.1" />
+    <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="3.1.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="System.Text.Json" Version="8.0.1" />
+  </ItemGroup>
 
 </Project>
